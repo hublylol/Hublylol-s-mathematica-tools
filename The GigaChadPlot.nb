@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1262511,      21602]
-NotebookOptionsPosition[   1262149,      21588]
-NotebookOutlinePosition[   1262552,      21604]
-CellTagsIndexPosition[   1262509,      21601]
+NotebookDataLength[   1264094,      21636]
+NotebookOptionsPosition[   1263735,      21622]
+NotebookOutlinePosition[   1264135,      21638]
+CellTagsIndexPosition[   1264092,      21635]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -18659,8 +18659,13 @@ h/qhz87p4j/L1T482TH0ufU8i7s3NydLbMB/k65P/BgPZLrJq68+eu3x/n59
                 RowBox[{"If", "[", 
                  RowBox[{
                   RowBox[{
-                   RowBox[{"Length", "[", "functions", "]"}], "==", "2"}], 
-                  ",", 
+                   RowBox[{
+                    RowBox[{"Length", "[", "functions", "]"}], "==", "2"}], "&&", 
+                   RowBox[{
+                    RowBox[{"#3", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "!=", 
+                    RowBox[{"#3", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}]}]}], ",", 
                   RowBox[{"AppendTo", "[", 
                    RowBox[{"graphs", ",", 
                     RowBox[{"RegionPlot", "[", 
@@ -18770,8 +18775,13 @@ h/qhz87p4j/L1T482TH0ufU8i7s3NydLbMB/k65P/BgPZLrJq68+eu3x/n59
                 RowBox[{"If", "[", 
                  RowBox[{
                   RowBox[{
-                   RowBox[{"Length", "[", "functions", "]"}], "==", "2"}], 
-                  ",", 
+                   RowBox[{
+                    RowBox[{"Length", "[", "functions", "]"}], "==", "2"}], "&&", 
+                   RowBox[{
+                    RowBox[{"#3", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "!=", 
+                    RowBox[{"#3", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}]}]}], ",", 
                   RowBox[{"AppendTo", "[", 
                    RowBox[{"graphs", ",", 
                     RowBox[{"RegionPlot", "[", 
@@ -18858,8 +18868,15 @@ h/qhz87p4j/L1T482TH0ufU8i7s3NydLbMB/k65P/BgPZLrJq68+eu3x/n59
                RowBox[{"Sort", "[", 
                 RowBox[{
                  RowBox[{
-                  RowBox[{"var", "[", 
-                   RowBox[{"[", "1", "]"}], "]"}], "/.", 
+                  RowBox[{
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"#", "=!=", 
+                    RowBox[{"{", "}"}]}], ",", 
+                    RowBox[{
+                    RowBox[{"var", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "/.", "#"}], ",", 
+                    RowBox[{"{", "0", "}"}]}], "]"}], "&"}], "[", 
                   RowBox[{"DeleteDuplicates", "[", 
                    RowBox[{"Solve", "[", 
                     RowBox[{
@@ -18878,8 +18895,8 @@ h/qhz87p4j/L1T482TH0ufU8i7s3NydLbMB/k65P/BgPZLrJq68+eu3x/n59
                     RowBox[{"[", "3", "]"}], "]"}]}]}], ",", 
                     RowBox[{"var", "[", 
                     RowBox[{"[", "1", "]"}], "]"}], ",", "Reals"}], "]"}], 
-                   "]"}]}], ",", "Less"}], "]"}], "]"}]}], "]"}]}], "]"}]}], 
-         "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                   "]"}], "]"}], ",", "Less"}], "]"}], "]"}]}], "]"}]}], 
+           "]"}]}], "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
         RowBox[{"If", "[", 
          RowBox[{
           RowBox[{
@@ -18979,8 +18996,13 @@ h/qhz87p4j/L1T482TH0ufU8i7s3NydLbMB/k65P/BgPZLrJq68+eu3x/n59
                 RowBox[{"If", "[", 
                  RowBox[{
                   RowBox[{
-                   RowBox[{"Length", "[", "functions", "]"}], "==", "2"}], 
-                  ",", 
+                   RowBox[{
+                    RowBox[{"Length", "[", "functions", "]"}], "==", "2"}], "&&", 
+                   RowBox[{
+                    RowBox[{"#3", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "!=", 
+                    RowBox[{"#3", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}]}]}], ",", 
                   RowBox[{"AppendTo", "[", 
                    RowBox[{"graphs", ",", 
                     RowBox[{"RegionPlot", "[", 
@@ -19088,8 +19110,13 @@ h/qhz87p4j/L1T482TH0ufU8i7s3NydLbMB/k65P/BgPZLrJq68+eu3x/n59
                 RowBox[{"If", "[", 
                  RowBox[{
                   RowBox[{
-                   RowBox[{"Length", "[", "functions", "]"}], "==", "2"}], 
-                  ",", 
+                   RowBox[{
+                    RowBox[{"Length", "[", "functions", "]"}], "==", "2"}], "&&", 
+                   RowBox[{
+                    RowBox[{"#3", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "!=", 
+                    RowBox[{"#2", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}]}]}], ",", 
                   RowBox[{"AppendTo", "[", 
                    RowBox[{"graphs", ",", 
                     RowBox[{"RegionPlot", "[", 
@@ -19174,8 +19201,15 @@ h/qhz87p4j/L1T482TH0ufU8i7s3NydLbMB/k65P/BgPZLrJq68+eu3x/n59
                RowBox[{"Sort", "[", 
                 RowBox[{
                  RowBox[{
-                  RowBox[{"var", "[", 
-                   RowBox[{"[", "1", "]"}], "]"}], "/.", 
+                  RowBox[{
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"#", "=!=", 
+                    RowBox[{"{", "}"}]}], ",", 
+                    RowBox[{
+                    RowBox[{"var", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "/.", "#"}], ",", 
+                    RowBox[{"{", "0", "}"}]}], "]"}], "&"}], "[", 
                   RowBox[{"DeleteDuplicates", "[", 
                    RowBox[{"Solve", "[", 
                     RowBox[{
@@ -19194,8 +19228,8 @@ h/qhz87p4j/L1T482TH0ufU8i7s3NydLbMB/k65P/BgPZLrJq68+eu3x/n59
                     RowBox[{"[", "3", "]"}], "]"}]}]}], ",", 
                     RowBox[{"var", "[", 
                     RowBox[{"[", "1", "]"}], "]"}], ",", "Reals"}], "]"}], 
-                   "]"}]}], ",", "Less"}], "]"}], "]"}]}], "]"}]}], "]"}]}], 
-         "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                   "]"}], "]"}], ",", "Less"}], "]"}], "]"}]}], "]"}]}], 
+           "]"}]}], "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
         RowBox[{
          RowBox[{
           RowBox[{"AppendTo", "[", 
@@ -21582,11 +21616,11 @@ h/qhz87p4j/L1T482TH0ufU8i7s3NydLbMB/k65P/BgPZLrJq68+eu3x/n59
    3.8704640387872224`*^9, 3.870464078015667*^9}, {3.8704782084485874`*^9, 
    3.870478228222912*^9}, 3.870730816537798*^9, 3.870763675445182*^9, 
    3.87080310033924*^9, 3.8713422763415937`*^9, 3.8713427551056557`*^9, 
-   3.871362928147541*^9, 
-   3.871411406405323*^9},ExpressionUUID->"a09a9a92-e8f1-47f9-b811-\
+   3.871362928147541*^9, 3.871411406405323*^9, 
+   3.871412717675425*^9},ExpressionUUID->"a09a9a92-e8f1-47f9-b811-\
 15fd759f24fb"]
 },
-WindowSize->{1109., 626.5},
+WindowSize->{1109, 621},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (February 4, 2022)",
 StyleDefinitions->"Default.nb",
@@ -21603,7 +21637,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1261587, 21566, 5416, "Code",ExpressionUUID->"a09a9a92-e8f1-47f9-b811-15fd759f24fb"]
+Cell[558, 20, 1263173, 21600, 5416, "Code",ExpressionUUID->"a09a9a92-e8f1-47f9-b811-15fd759f24fb"]
 }
 ]
 *)
