@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1398153,      23631]
-NotebookOptionsPosition[   1397794,      23617]
-NotebookOutlinePosition[   1398194,      23633]
-CellTagsIndexPosition[   1398151,      23630]
+NotebookDataLength[   1399015,      23651]
+NotebookOptionsPosition[   1398656,      23637]
+NotebookOutlinePosition[   1399056,      23653]
+CellTagsIndexPosition[   1399013,      23650]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -88,7 +88,26 @@ created by Joseph and helped by others\>\""}], ";"}], "\n", "\n",
      "change", " ", "the", " ", "values", " ", "to", " ", "something", " ", 
       "else", " ", "if", " ", "you", " ", "dont", " ", "want", " ", "to", " ",
        "type", " ", "the", " ", "same", " ", "optional", " ", "sttatement", 
-      " ", "out", " ", "constantly"}]}], " ", "*)"}], "\n", 
+      " ", "out", " ", "constantly"}]}], " ", "*)"}], "\n", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Options", "[", "GigaChadPlot", "]"}], "=", 
+     RowBox[{"Join", "[", 
+      RowBox[{
+       RowBox[{"Options", "[", "Plot", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Asy", "->", "False"}], ",", 
+         RowBox[{"BoundArea", "->", "False"}], ",", 
+         RowBox[{"Int", "->", "False"}], ",", 
+         RowBox[{"TN", "->", "Null"}], ",", 
+         RowBox[{"Inv", "->", "False"}], ",", 
+         RowBox[{"Labels", "->", "True"}], ",", 
+         RowBox[{"BackGround", "->", "\"\<Base\>\""}], ",", 
+         RowBox[{"Parallel", "->", "False"}], ",", 
+         RowBox[{"KermondTP", "->", "False"}], ",", 
+         RowBox[{"DecimalPoints", "->", "6"}]}], "}"}]}], "]"}]}], ";"}], 
+   "\n", 
    RowBox[{
     RowBox[{"GigaChadPlot", "[", 
      RowBox[{"funclist_", ",", 
@@ -21666,7 +21685,7 @@ yp7H/w/cXE9B
                     RowBox[{"Length", "[", "sol", "]"}]}], "}"}]}], "]"}]}], 
                    "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
                   RowBox[{"(*", " ", 
-                   RowBox[{"infliction", " ", "point", " ", "finding"}], " ", 
+                   RowBox[{"inflection", " ", "point", " ", "finding"}], " ", 
                    "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
                   RowBox[{
                    RowBox[{
@@ -21694,7 +21713,7 @@ yp7H/w/cXE9B
                     ",", 
                     RowBox[{"StringForm", "[", 
                     RowBox[{
-                    "\"\<(``, ``) : Point of infliction for ``\>\"", ",", 
+                    "\"\<(``, ``) : Point of inflection for ``\>\"", ",", 
                     RowBox[{"realChecker", "[", "k", "]"}], ",", 
                     RowBox[{"realChecker", "[", 
                     RowBox[{"exp", "/.", 
@@ -21902,7 +21921,7 @@ yp7H/w/cXE9B
                    "point", " ", "creation", " ", "for", " ", "the", " ", 
                     "turning", " ", "points", " ", "and", " ", "local", " ", 
                     RowBox[{"min", "/", "max"}], " ", "and", " ", "station", 
-                    " ", "point", " ", "of", " ", "infliction", " ", 
+                    " ", "point", " ", "of", " ", "inflection", " ", 
                     "checking"}], " ", "*)"}], "\[IndentingNewLine]", 
                   "\[IndentingNewLine]", 
                   RowBox[{"AppendTo", "[", 
@@ -23611,8 +23630,9 @@ intersection\>\"", ",",
    3.8747175985804863`*^9}, {3.8747176826557713`*^9, 3.874717735710784*^9}, 
    3.880403332529731*^9, {3.884063654522437*^9, 3.884063666894436*^9}, 
    3.8849742670425377`*^9, {3.884975443155233*^9, 3.8849755016964445`*^9}, 
-   3.88566750134048*^9, 3.885707914244111*^9, 
-   3.8870798981706567`*^9},ExpressionUUID->"a09a9a92-e8f1-47f9-b811-\
+   3.88566750134048*^9, 3.885707914244111*^9, 3.8870798981706567`*^9, {
+   3.8871262599001565`*^9, 3.8871262617924266`*^9}, {3.887126505212047*^9, 
+   3.8871265282011967`*^9}},ExpressionUUID->"a09a9a92-e8f1-47f9-b811-\
 15fd759f24fb"]
 },
 WindowSize->{1109, 621},
@@ -23632,7 +23652,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1397232, 23595, 5956, "Code",ExpressionUUID->"a09a9a92-e8f1-47f9-b811-15fd759f24fb"]
+Cell[558, 20, 1398094, 23615, 5991, "Code",ExpressionUUID->"a09a9a92-e8f1-47f9-b811-15fd759f24fb"]
 }
 ]
 *)
