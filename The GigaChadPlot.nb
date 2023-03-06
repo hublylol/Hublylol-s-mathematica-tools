@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1395222,      23573]
-NotebookOptionsPosition[   1394863,      23559]
-NotebookOutlinePosition[   1395263,      23575]
-CellTagsIndexPosition[   1395220,      23572]
+NotebookDataLength[   1398153,      23631]
+NotebookOptionsPosition[   1397794,      23617]
+NotebookOutlinePosition[   1398194,      23633]
+CellTagsIndexPosition[   1398151,      23630]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -90,24 +90,6 @@ created by Joseph and helped by others\>\""}], ";"}], "\n", "\n",
        "type", " ", "the", " ", "same", " ", "optional", " ", "sttatement", 
       " ", "out", " ", "constantly"}]}], " ", "*)"}], "\n", 
    RowBox[{
-    RowBox[{
-     RowBox[{"Options", "[", "GigaChadPlot", "]"}], "=", 
-     RowBox[{"Join", "[", 
-      RowBox[{
-       RowBox[{"Options", "[", "Plot", "]"}], ",", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"Asy", "->", "False"}], ",", 
-         RowBox[{"BoundArea", "->", "False"}], ",", 
-         RowBox[{"Int", "->", "False"}], ",", 
-         RowBox[{"TN", "->", "Null"}], ",", 
-         RowBox[{"Inv", "->", "False"}], ",", 
-         RowBox[{"Labels", "->", "True"}], ",", 
-         RowBox[{"BackGround", "->", "\"\<Charalambous\>\""}], ",", 
-         RowBox[{"Parallel", "->", "False"}], ",", 
-         RowBox[{"KermondTP", "->", "False"}]}], "}"}]}], "]"}]}], ";"}], 
-   "\n", "\n", "\n", 
-   RowBox[{
     RowBox[{"GigaChadPlot", "[", 
      RowBox[{"funclist_", ",", 
       RowBox[{"var", ":", 
@@ -151,7 +133,8 @@ created by Joseph and helped by others\>\""}], ";"}], "\n", "\n",
              RowBox[{"Thickness", "[", "0.0055", "]"}]}], ",", "exp", ",", 
             RowBox[{"btninfo", "=", 
              RowBox[{"{", "}"}]}], ",", "inv", ",", "xint", ",", "yint", ",", 
-            "tp", ",", "sol", ",", "num", ",", "infliction", ",", 
+            "tp", ",", "sol", ",", "num", ",", "tempEP", ",", "infliction", 
+            ",", 
             RowBox[{"lines", "=", 
              RowBox[{"{", "}"}]}], ",", 
             RowBox[{"kermonds", "=", 
@@ -21259,11 +21242,23 @@ yp7H/w/cXE9B
                  "]"}], "]"}], ",", "var", ",", 
                RowBox[{"PlotRange", "\[Rule]", "range"}], ",", 
                RowBox[{"Evaluate", "[", 
-                RowBox[{"FilterRules", "[", 
-                 RowBox[{
-                  RowBox[{"{", "opts", "}"}], ",", 
-                  RowBox[{"Options", "[", "Plot", "]"}]}], "]"}], "]"}], ",", 
-               "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"FilterRules", "[", 
+                  RowBox[{
+                   RowBox[{"{", "opts", "}"}], ",", 
+                   RowBox[{"Options", "[", "Plot", "]"}]}], "]"}], "/.", 
+                 RowBox[{"If", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"OptionValue", "[", "PlotLegends", "]"}], "===", 
+                    "\"\<Expressions\>\""}], ",", 
+                   RowBox[{
+                    RowBox[{"OptionValue", "[", "PlotLegends", "]"}], "->", 
+                    "\"\<AllExpressions\>\""}], ",", 
+                   RowBox[{
+                    RowBox[{"OptionValue", "[", "PlotLegends", "]"}], "->", 
+                    RowBox[{"OptionValue", "[", "PlotLegends", "]"}]}]}], 
+                  "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
                RowBox[{"Prolog", "->", "background"}]}], "]"}]}], "]"}], ";", 
            "\[IndentingNewLine]", "\[IndentingNewLine]", 
            RowBox[{"(*", " ", 
@@ -22017,15 +22012,14 @@ yp7H/w/cXE9B
                    RowBox[{
                    "end", " ", "point", " ", "finding", " ", "and", " ", 
                     "point", " ", "creation"}], " ", "*)"}], 
-                  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"tempEP", "=", 
+                   RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+                  "\[IndentingNewLine]", 
                   RowBox[{"Quiet", "[", 
                    RowBox[{
                     RowBox[{"AppendTo", "[", 
-                    RowBox[{"points", ",", 
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"Tooltip", "[", 
-                    RowBox[{
+                    RowBox[{"tempEP", ",", 
                     RowBox[{"{", 
                     RowBox[{
                     RowBox[{"var", "[", 
@@ -22035,35 +22029,9 @@ yp7H/w/cXE9B
                     RowBox[{"var", "[", 
                     RowBox[{"[", "1", "]"}], "]"}], "->", 
                     RowBox[{"var", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}]}]}]}], "}"}], ",", 
-                    RowBox[{"tooltip", "[", 
-                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"var", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}], ",", 
-                    RowBox[{"exp", "/.", 
-                    RowBox[{
-                    RowBox[{"var", "[", 
-                    RowBox[{"[", "1", "]"}], "]"}], "->", 
-                    RowBox[{"var", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}]}]}]}], "}"}], ",", 
-                    RowBox[{"StringForm", "[", 
-                    RowBox[{"\"\<(``, ``): End point of graph ``\>\"", ",", 
-                    RowBox[{"realChecker", "[", 
-                    RowBox[{"var", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}], "]"}], ",", 
-                    "\[IndentingNewLine]", "\[IndentingNewLine]", 
-                    RowBox[{"realChecker", "[", 
-                    RowBox[{"exp", "/.", 
-                    RowBox[{
-                    RowBox[{"var", "[", 
-                    RowBox[{"[", "1", "]"}], "]"}], "->", 
-                    RowBox[{"var", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}]}]}], "]"}], ",", "exp"}], 
-                    "]"}]}], "]"}]}], "]"}], ",", 
-                    RowBox[{"Tooltip", "[", 
-                    RowBox[{
+                    RowBox[{"[", "2", "]"}], "]"}]}]}]}], "}"}]}], "]"}], ";", 
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"tempEP", ",", 
                     RowBox[{"{", 
                     RowBox[{
                     RowBox[{"var", "[", 
@@ -22073,33 +22041,77 @@ yp7H/w/cXE9B
                     RowBox[{"var", "[", 
                     RowBox[{"[", "1", "]"}], "]"}], "->", 
                     RowBox[{"var", "[", 
-                    RowBox[{"[", "3", "]"}], "]"}]}]}]}], "}"}], ",", 
-                    "\[IndentingNewLine]", "\[IndentingNewLine]", 
-                    RowBox[{"tooltip", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}]}]}]}], "}"}]}], "]"}], ";",
+                     "\[IndentingNewLine]", 
+                    RowBox[{"tempEP", "=", 
+                    RowBox[{"Join", "[", 
+                    RowBox[{"tempEP", ",", 
                     RowBox[{
+                    RowBox[{
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"NumericQ", "[", 
+                    RowBox[{"exp", "/.", 
+                    RowBox[{
+                    RowBox[{"var", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "->", "ep"}]}], "]"}], 
+                    ",", 
                     RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"var", "[", 
-                    RowBox[{"[", "3", "]"}], "]"}], ",", 
+                    RowBox[{"ep", ",", 
                     RowBox[{"exp", "/.", 
                     RowBox[{
                     RowBox[{"var", "[", 
-                    RowBox[{"[", "1", "]"}], "]"}], "->", 
-                    RowBox[{"var", "[", 
-                    RowBox[{"[", "3", "]"}], "]"}]}]}]}], "}"}], ",", 
-                    RowBox[{"StringForm", "[", 
-                    RowBox[{"\"\<(``, ``): End point of graph ``\>\"", ",", 
-                    RowBox[{"realChecker", "[", 
-                    RowBox[{"var", "[", 
-                    RowBox[{"[", "3", "]"}], "]"}], "]"}], ",", 
-                    RowBox[{"realChecker", "[", 
-                    RowBox[{"exp", "/.", 
+                    RowBox[{"[", "1", "]"}], "]"}], "->", "ep"}]}]}], "}"}], 
+                    ",", "Nothing"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"ep", ",", "#"}], "}"}]}], "]"}], "&"}], "[", 
                     RowBox[{
                     RowBox[{"var", "[", 
-                    RowBox[{"[", "1", "]"}], "]"}], "->", 
+                    RowBox[{"[", "1", "]"}], "]"}], "/.", 
+                    RowBox[{"Solve", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"System`FunctionDiscontinuities", "[", 
+                    RowBox[{
+                    RowBox[{"exp", "&&", 
+                    RowBox[{
                     RowBox[{"var", "[", 
-                    RowBox[{"[", "3", "]"}], "]"}]}]}], "]"}], ",", "exp"}], 
-                    "]"}]}], "]"}]}], "]"}]}], "}"}]}], "]"}], ";", 
+                    RowBox[{"[", "2", "]"}], "]"}], "<=", 
+                    RowBox[{"var", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "<=", 
+                    RowBox[{"var", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}]}]}], ",", 
+                    RowBox[{"var", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", "Reals"}], "]"}], "&&", 
+                    RowBox[{
+                    RowBox[{"var", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "<=", 
+                    RowBox[{"var", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "<=", 
+                    RowBox[{"var", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}]}]}], ",", 
+                    RowBox[{"var", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", "Reals"}], "]"}]}], 
+                    "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"tempEP", "=", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Length", "[", 
+                    RowBox[{"Select", "[", 
+                    RowBox[{"ep", ",", 
+                    RowBox[{
+                    RowBox[{"FreeQ", "[", 
+                    RowBox[{"#", ",", "_Complex"}], "]"}], "&"}]}], "]"}], 
+                    "]"}], "==", "2"}], ",", "ep", ",", "Nothing"}], "]"}], 
+                    ",", 
+                    RowBox[{"{", 
+                    RowBox[{"ep", ",", "tempEP"}], "}"}]}], "]"}]}], ";", 
                     "\[IndentingNewLine]", "\[IndentingNewLine]", 
                     RowBox[{"(*", " ", 
                     RowBox[{
@@ -22262,8 +22274,9 @@ yp7H/w/cXE9B
                    "finding", " ", "asymptotes", " ", "only", " ", "if", " ", 
                     "the", " ", "user", " ", "wants", " ", "them"}], " ", 
                    "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-                  RowBox[{"If", "[", 
-                   RowBox[{
+                  RowBox[{"Quiet", "[", 
+                   RowBox[{"If", "[", 
+                    RowBox[{
                     RowBox[{
                     RowBox[{"OptionValue", "[", "Asy", "]"}], "==", 
                     "\"\<N\>\""}], ",", 
@@ -22349,7 +22362,8 @@ yp7H/w/cXE9B
                     RowBox[{
                     RowBox[{"If", "[", 
                     RowBox[{
-                    RowBox[{"NumericQ", "[", "#", "]"}], ",", 
+                    RowBox[{
+                    RowBox[{"NumericQ", "[", "#", "]"}], "===", "True"}], ",", 
                     RowBox[{
                     RowBox[{
                     RowBox[{"If", "[", 
@@ -22396,7 +22410,8 @@ yp7H/w/cXE9B
                     RowBox[{
                     RowBox[{"If", "[", 
                     RowBox[{
-                    RowBox[{"NumericQ", "[", "#", "]"}], ",", 
+                    RowBox[{
+                    RowBox[{"NumericQ", "[", "#", "]"}], "===", "True"}], ",", 
                     RowBox[{
                     RowBox[{
                     RowBox[{"If", "[", 
@@ -22485,11 +22500,11 @@ yp7H/w/cXE9B
                     RowBox[{
                     RowBox[{"-", "2"}], "->", "Nothing"}]}], "]"}]}]}]}], 
                     "]"}]}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                    "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
                     RowBox[{"(*", " ", 
                     RowBox[{
                     "graph", " ", "intersection", " ", "with", " ", 
                     "asymptote"}], " ", "*)"}], "\[IndentingNewLine]", 
-                    "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
                     "\[IndentingNewLine]", 
                     RowBox[{
                     RowBox[{"asy", "[", "\"\<Slant\>\"", "]"}], "=", 
@@ -22641,22 +22656,57 @@ yp7H/w/cXE9B
                     RowBox[{"var", "[", 
                     RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "]"}]}], ";", 
                     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"asy", "[", "\"\<Vertical\>\"", "]"}], "=", 
+                    RowBox[{"DeleteCases", "[", 
+                    RowBox[{
+                    RowBox[{"asy", "[", "\"\<Vertical\>\"", "]"}], ",", 
+                    RowBox[{"Alternatives", "@@", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"ep", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"ep", ",", "tempEP"}], "}"}]}], "]"}]}]}], 
+                    "]"}]}], ";", "\[IndentingNewLine]", 
+                    "\[IndentingNewLine]", 
                     RowBox[{"Table", "[", 
                     RowBox[{
                     RowBox[{"If", "[", 
                     RowBox[{
                     RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{
-                    RowBox[{"Numerator", "[", "exp", "]"}], "/.", 
+                    RowBox[{"NumericQ", "[", 
+                    RowBox[{"Limit", "[", 
+                    RowBox[{"exp", ",", 
                     RowBox[{
                     RowBox[{"var", "[", 
                     RowBox[{"[", "1", "]"}], "]"}], "->", 
                     RowBox[{
                     RowBox[{"asy", "[", "\"\<Vertical\>\"", "]"}], "[", 
-                    RowBox[{"[", "vert", "]"}], "]"}]}]}], ")"}], "==", "0"}],
-                     ",", 
+                    RowBox[{"[", "vert", "]"}], "]"}]}], ",", 
+                    RowBox[{"Direction", "\[Rule]", "\"\<FromAbove\>\""}]}], 
+                    "]"}], "]"}], "==", 
+                    RowBox[{"NumericQ", "[", 
+                    RowBox[{"Limit", "[", 
+                    RowBox[{"exp", ",", 
                     RowBox[{
+                    RowBox[{"var", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "->", 
+                    RowBox[{
+                    RowBox[{"asy", "[", "\"\<Vertical\>\"", "]"}], "[", 
+                    RowBox[{"[", "vert", "]"}], "]"}]}], ",", 
+                    RowBox[{"Direction", "\[Rule]", "\"\<FromBelow\>\""}]}], 
+                    "]"}], "]"}], "==", 
+                    RowBox[{"!", 
+                    RowBox[{"NumericQ", "[", 
+                    RowBox[{"exp", "/.", 
+                    RowBox[{
+                    RowBox[{"var", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "->", 
+                    RowBox[{
+                    RowBox[{"asy", "[", "\"\<Vertical\>\"", "]"}], "[", 
+                    RowBox[{"[", "vert", "]"}], "]"}]}]}], "]"}]}]}], ",", 
+                    "\[IndentingNewLine]", "\[IndentingNewLine]", 
                     RowBox[{
                     RowBox[{
                     RowBox[{"(", 
@@ -22691,14 +22741,9 @@ yp7H/w/cXE9B
                     RowBox[{
                     RowBox[{"asy", "[", "\"\<Vertical\>\"", "]"}], "[", 
                     RowBox[{"[", "vert", "]"}], "]"}]}]}], "]"}]}], "}"}], 
-                    "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-                    RowBox[{
-                    RowBox[{"asy", "[", "\"\<Vertical\>\"", "]"}], "=", 
-                    RowBox[{"ReplacePart", "[", 
-                    RowBox[{
-                    RowBox[{"asy", "[", "\"\<Vertical\>\"", "]"}], ",", 
-                    RowBox[{"vert", "->", "Nothing"}]}], "]"}]}]}]}], "]"}], 
-                    ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                    "]"}], ","}], "\[IndentingNewLine]", 
+                    "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+                    "\[IndentingNewLine]", 
                     RowBox[{"{", 
                     RowBox[{"vert", ",", 
                     RowBox[{"Length", "[", 
@@ -22720,6 +22765,21 @@ yp7H/w/cXE9B
                     RowBox[{"#", ",", "_Complex"}], "]"}], "&"}]}], "]"}], 
                     ",", "_Infinity"}], "]"}]}], ";", "\[IndentingNewLine]", 
                     "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"asy", "[", "\"\<Vertical\>\"", "]"}], "=", 
+                    RowBox[{"DeleteCases", "[", 
+                    RowBox[{
+                    RowBox[{"asy", "[", "\"\<Vertical\>\"", "]"}], ",", 
+                    RowBox[{"Alternatives", "@@", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"hole", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"hole", ",", 
+                    RowBox[{"asy", "[", "\"\<Hole\>\"", "]"}]}], "}"}]}], 
+                    "]"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+                    "\[IndentingNewLine]", "\[IndentingNewLine]", 
                     RowBox[{
                     RowBox[{"asy", "[", "\"\<Horizontal\>\"", "]"}], "=", 
                     RowBox[{"DeleteCases", "[", 
@@ -22909,8 +22969,8 @@ intersection\>\"", ",",
                     RowBox[{"Length", "[", 
                     RowBox[{"asy", "[", "\"\<Horizontal\>\"", "]"}], "]"}]}], 
                     "}"}]}], "]"}]}], "]"}], ";"}]}], "\[IndentingNewLine]", 
-                   "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
-                  "\[IndentingNewLine]", 
+                    "\[IndentingNewLine]", "]"}], "]"}], ";", 
+                  "\[IndentingNewLine]", "\[IndentingNewLine]", 
                   RowBox[{"(*", " ", 
                    RowBox[{
                    "if", " ", "the", " ", "thing", " ", "above", " ", 
@@ -23158,6 +23218,25 @@ intersection\>\"", ",",
                     RowBox[{"Red", ",", "Dashed", ",", "thicc"}], "}"}], 
                     "]"}]}]}], "]"}], ",", "Nothing"}], "]"}], ",", 
                     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"points", ",", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"Tooltip", "[", 
+                    RowBox[{"ep", ",", 
+                    RowBox[{"tooltip", "[", 
+                    RowBox[{"ep", ",", 
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{"\"\<(``, ``) : End Point for graph ``\>\"", ",", 
+                    RowBox[{"ep", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", 
+                    RowBox[{"ep", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], ",", "exp"}], "]"}]}], 
+                    "]"}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"ep", ",", "tempEP"}], "}"}]}], "]"}]}], "]"}], 
+                    ";", 
                     RowBox[{"ListPlot", "[", 
                     RowBox[{
                     RowBox[{"Flatten", "[", "points", "]"}], ",", 
@@ -23166,7 +23245,7 @@ intersection\>\"", ",",
                     RowBox[{
                     RowBox[{"Random", "[", "]"}], ",", 
                     RowBox[{"Random", "[", "]"}], ",", 
-                    RowBox[{"Random", "[", "]"}]}], "]"}]}]}], "]"}], ",", 
+                    RowBox[{"Random", "[", "]"}]}], "]"}]}]}], "]"}]}], ",", 
                     "\[IndentingNewLine]", "\[IndentingNewLine]", 
                     RowBox[{"(*", " ", 
                     RowBox[{
@@ -23277,30 +23356,8 @@ intersection\>\"", ",",
                     RowBox[{"{", 
                     RowBox[{"n", ",", "tp"}], "}"}]}], "]"}]}], "}"}], ",", 
                     RowBox[{"{", 
-                    RowBox[{"\"\<End Points: \>\"", ",", 
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"var", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}], ",", 
-                    RowBox[{"exp", "/.", 
-                    RowBox[{
-                    RowBox[{"var", "[", 
-                    RowBox[{"[", "1", "]"}], "]"}], "->", 
-                    RowBox[{"var", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}]}]}]}], "}"}], ",", 
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"var", "[", 
-                    RowBox[{"[", "3", "]"}], "]"}], ",", 
-                    RowBox[{"exp", "/.", 
-                    RowBox[{
-                    RowBox[{"var", "[", 
-                    RowBox[{"[", "1", "]"}], "]"}], "->", 
-                    RowBox[{"var", "[", 
-                    RowBox[{"[", "3", "]"}], "]"}]}]}]}], "}"}]}], "}"}]}], 
-                    "}"}], ",", 
+                    RowBox[{"\"\<End Points: \>\"", ",", "tempEP"}], "}"}], 
+                    ",", 
                     RowBox[{"If", "[", 
                     RowBox[{
                     RowBox[{
@@ -23437,8 +23494,12 @@ intersection\>\"", ",",
            RowBox[{"graphsFinal", "=", 
             RowBox[{"DeleteCases", "[", 
              RowBox[{
-              RowBox[{"Flatten", "[", "graphs", "]"}], ",", "Null"}], "]"}]}],
-            ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+              RowBox[{"DeleteCases", "[", 
+               RowBox[{
+                RowBox[{"Flatten", "[", "graphs", "]"}], ",", "Null"}], "]"}],
+               ",", 
+              RowBox[{"Graphics", "[", "White", "]"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", "\[IndentingNewLine]", 
            RowBox[{"(*", " ", 
             RowBox[{
             "button", " ", "creation", " ", "with", " ", "all", " ", "in", 
@@ -23497,17 +23558,13 @@ intersection\>\"", ",",
             RowBox[{
             "showing", " ", "the", " ", "graphs", " ", "and", " ", 
              "everything"}], " ", "*)"}], "\[IndentingNewLine]", 
-           "\[IndentingNewLine]", 
            RowBox[{"Labeled", "[", 
             RowBox[{
              RowBox[{"Labeled", "[", 
               RowBox[{
                RowBox[{"Show", "[", 
-                RowBox[{
-                 RowBox[{
-                  RowBox[{"Flatten", "[", "graphs", "]"}], "[", 
-                  RowBox[{"[", "1", "]"}], "]"}], ",", "graphsFinal"}], "]"}],
-                ",", 
+                RowBox[{"Flatten", "[", 
+                 RowBox[{"{", "graphsFinal", "}"}], "]"}], "]"}], ",", 
                RowBox[{"{", 
                 RowBox[{
                 "\"\<The GigaChadPlot by Joseph\>\"", ",", 
@@ -23554,7 +23611,8 @@ intersection\>\"", ",",
    3.8747175985804863`*^9}, {3.8747176826557713`*^9, 3.874717735710784*^9}, 
    3.880403332529731*^9, {3.884063654522437*^9, 3.884063666894436*^9}, 
    3.8849742670425377`*^9, {3.884975443155233*^9, 3.8849755016964445`*^9}, 
-   3.88566750134048*^9},ExpressionUUID->"a09a9a92-e8f1-47f9-b811-\
+   3.88566750134048*^9, 3.885707914244111*^9, 
+   3.8870798981706567`*^9},ExpressionUUID->"a09a9a92-e8f1-47f9-b811-\
 15fd759f24fb"]
 },
 WindowSize->{1109, 621},
@@ -23574,7 +23632,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1394301, 23537, 5903, "Code",ExpressionUUID->"a09a9a92-e8f1-47f9-b811-15fd759f24fb"]
+Cell[558, 20, 1397232, 23595, 5956, "Code",ExpressionUUID->"a09a9a92-e8f1-47f9-b811-15fd759f24fb"]
 }
 ]
 *)
