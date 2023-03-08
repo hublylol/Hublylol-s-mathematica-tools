@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1636588,      27553]
-NotebookOptionsPosition[   1636229,      27539]
-NotebookOutlinePosition[   1636629,      27555]
-CellTagsIndexPosition[   1636586,      27552]
+NotebookDataLength[   1636715,      27556]
+NotebookOptionsPosition[   1636356,      27542]
+NotebookOutlinePosition[   1636756,      27558]
+CellTagsIndexPosition[   1636713,      27555]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26024,12 +26024,14 @@ MBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAY/rD4P8YAmMM=
                     RowBox[{
                     RowBox[{"Length", "[", 
                     RowBox[{"Select", "[", 
+                    RowBox[{
+                    RowBox[{"Select", "[", 
                     RowBox[{"ep", ",", 
                     RowBox[{
                     RowBox[{"FreeQ", "[", 
                     RowBox[{"#", ",", "_Complex"}], "]"}], "&"}]}], "]"}], 
-                    "]"}], "==", "2"}], ",", "ep", ",", "Nothing"}], "]"}], 
-                    ",", 
+                    ",", "NumericQ"}], "]"}], "]"}], "==", "2"}], ",", "ep", 
+                    ",", "Nothing"}], "]"}], ",", 
                     RowBox[{"{", 
                     RowBox[{"ep", ",", "tempEP"}], "}"}]}], "]"}]}], ";", 
                     "\[IndentingNewLine]", "\[IndentingNewLine]", 
@@ -27534,7 +27536,8 @@ intersection\>\"", ",",
    3.88566750134048*^9, 3.885707914244111*^9, 3.8870798981706567`*^9, {
    3.8871262599001565`*^9, 3.8871262617924266`*^9}, {3.887126505212047*^9, 
    3.8871265282011967`*^9}, 3.8871327461293364`*^9, {3.887171959885763*^9, 
-   3.887172011765744*^9}},ExpressionUUID->"a09a9a92-e8f1-47f9-b811-\
+   3.887172011765744*^9}, 
+   3.8872172662732964`*^9},ExpressionUUID->"a09a9a92-e8f1-47f9-b811-\
 15fd759f24fb"]
 },
 WindowSize->{1109, 621},
@@ -27554,7 +27557,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1635667, 27517, 6044, "Code",ExpressionUUID->"a09a9a92-e8f1-47f9-b811-15fd759f24fb"]
+Cell[558, 20, 1635794, 27520, 6044, "Code",ExpressionUUID->"a09a9a92-e8f1-47f9-b811-15fd759f24fb"]
 }
 ]
 *)
