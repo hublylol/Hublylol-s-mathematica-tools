@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1660709,      28064]
-NotebookOptionsPosition[   1660337,      28050]
-NotebookOutlinePosition[   1660750,      28066]
-CellTagsIndexPosition[   1660707,      28063]
+NotebookDataLength[   1661216,      28074]
+NotebookOptionsPosition[   1660852,      28060]
+NotebookOutlinePosition[   1661257,      28076]
+CellTagsIndexPosition[   1661214,      28073]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -118,7 +118,7 @@ by Joseph and helped by others\>\""}], ";"}], "\n", "\n",
          RowBox[{"KermondTP", "->", "False"}], ",", 
          RowBox[{"DecimalPoints", "->", "6"}], ",", 
          RowBox[{"ExpandFunctions", "->", "False"}]}], "}"}]}], "]"}]}], 
-    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    ";"}], "\n", "\n", 
    RowBox[{
     RowBox[{"GigaChadPlot", "[", 
      RowBox[{"funclist_", ",", 
@@ -26998,6 +26998,16 @@ MBgMBoPBYDAYDAaDwWAwGAwGg8FgMBgMBoPBYDAY/rD4P8YAmMM=
                     RowBox[{"var", "[", 
                     RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], "]"}]}], ";", 
                     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Head", "[", 
+                    RowBox[{"asy", "[", "\"\<Vertical\>\"", "]"}], "]"}], "=!=",
+                     "List"}], ",", 
+                    RowBox[{
+                    RowBox[{"asy", "[", "\"\<Vertical\>\"", "]"}], "=", 
+                    RowBox[{"{", "}"}]}]}], "]"}], ";", "\[IndentingNewLine]",
+                     "\[IndentingNewLine]", 
                     RowBox[{
                     RowBox[{"asy", "[", "\"\<Vertical\>\"", "]"}], "=", 
                     RowBox[{"DeleteCases", "[", 
@@ -28012,7 +28022,7 @@ intersection\>\"", ",",
               RowBox[{"OptionValue", "[", "Labels", "]"}], "===", "False"}], 
              ",", 
              RowBox[{"#", "&"}], ",", "Tooltip"}], "]"}], ")"}]}], 
-         "}"}]}]}]}], "]"}]}], "\n", "\n"}]}]], "Code",
+         "}"}]}]}]}], "]"}]}], "\[IndentingNewLine]", "\n"}]}]], "Code",
  CellChangeTimes->{{3.8686472031186004`*^9, 3.8686472552231727`*^9}, {
    3.868986145021072*^9, 3.8689861967509527`*^9}, {3.868987532206869*^9, 
    3.868987533357236*^9}, {3.8689875828613353`*^9, 3.868987643554083*^9}, {
@@ -28044,12 +28054,12 @@ intersection\>\"", ",",
    3.887172011765744*^9}, 3.8872172662732964`*^9, 3.8876033917032785`*^9, {
    3.89173149301575*^9, 3.8917315107159967`*^9}, 3.891897104190565*^9, {
    3.891897266798631*^9, 3.891897281169355*^9}, 3.8997764806664133`*^9, {
-   3.8998787515066133`*^9, 
-   3.8998787554222293`*^9}},ExpressionUUID->"a09a9a92-e8f1-47f9-b811-\
+   3.8998787515066133`*^9, 3.8998787554222293`*^9}, {3.900014156768094*^9, 
+   3.9000141765089645`*^9}},ExpressionUUID->"a09a9a92-e8f1-47f9-b811-\
 15fd759f24fb"]
 },
-WindowSize->{1107.75, 619.5},
-WindowMargins->{{Automatic, -1302}, {-72.5, Automatic}},
+WindowSize->{1108., 619.5},
+WindowMargins->{{Automatic, 0}, {Automatic, 0.5}},
 FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (February 4, 2022)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"b5c86e5f-18c8-4fc1-b476-8838224b67e6"
@@ -28065,7 +28075,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1659775, 28028, 6762, "Code",ExpressionUUID->"a09a9a92-e8f1-47f9-b811-15fd759f24fb"]
+Cell[558, 20, 1660290, 28038, 6797, "Code",ExpressionUUID->"a09a9a92-e8f1-47f9-b811-15fd759f24fb"]
 }
 ]
 *)
